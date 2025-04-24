@@ -1,3 +1,4 @@
+
 "use client"
 
 import * as React from "react"
@@ -578,6 +579,7 @@ const SidebarMenuButton = React.forwardRef<
     }
 
     return (
+      <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>{button}</TooltipTrigger>
         <TooltipContent
@@ -587,6 +589,7 @@ const SidebarMenuButton = React.forwardRef<
           {...tooltip}
         />
       </Tooltip>
+      </TooltipProvider>
     )
   }
 )
@@ -761,3 +764,4 @@ export {
   SidebarTrigger,
   useSidebar,
 }
+
